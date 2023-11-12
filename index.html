@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>PAH Generator</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <div id="insertListing">
+    <script src="script.js"></script>
+
+    <b>Select desired petpage format:</b><br>
+    <select name="template" id="template">
+      <option value="spensy">Standard Format</option>
+      <option value="1p">Bydz - One Pass</option>
+      <option value="2p">Bydz - Two Pass</option>
+      <option value="frenzy">Bydz - Frenzy</option>
+      <option value="nopass">Bydz - No Pass</option>
+      <option value="spicy">Bydz - Spicy H&H</option>
+      <option value="half">Bydz - H&H</option>
+    </select><br>
+
+    <b>Put listing here:</b><br>
+    <textarea id="userListing" placeholder="Listing:
+  
+PetName1 - Color1 Species1
+PetName2 - Color2 Species2
+  
+@username"></textarea>
+    <br>
+    <button id="previewListing" onclick="parseListing()">Preview Listing</button>
+
+    <div id="showListing">
+
+    </div>
+
+  </div>
+
+  <div id="instructions">
+    <b>Instructions:</b>
+    <ul>
+      <li>Choose your template from the dropdown. (All Bydz formats are relatively the same, just with rules filled in
+        for the desired PAH
+        type.)
+      <li>Copy and paste the PAH lister's listing into the box on the left.</li>
+      <li>Press the "Preview Listing" button.</li>
+      <li>Review the listing that pops up below the textbox. If there are any errors you would like to correct, do so.
+      </li>
+      <li>When satisfied, press the "Add Listing" button.</li>
+      <li>Repeat for all of your listings. <i>Do not refresh</i> or you will lose your progress.</li>
+      <li>When done, press the "Generate Petpage" button.</li>
+      <li>Copy and paste the resulting code into your (<i>empty!</i>) petpage. Be advised that this program generates
+        the <i>entire</i> petpage. You do not need to use a premade code. Credits:
+        <ul>
+          <li><a href="https://www.neopets.com/~spensy">Standard format</a></li>
+          <li><a href="https://www.neopets.com/~bydz">Bydz format + custom images</a></li>
+        </ul>
+      </li>
+      <li>If you want to add more pets to the listing, just keep adding them to the textarea and regenerate the petpage
+        as needed.</li>
+      <li>Before publishing your petpage, double check that you have your rules and other info.</li>
+      <li>That's it, you're done! Go forth and host. The Pound Chat loves you.</li>
+
+    </ul>
+
+    <b>Notes:</b>
+    <ul>
+      <li>Just copy and paste the user's listing. Do not include portions of the user's signature, or the program will
+        probably fail.</li>
+      <li>List a maximum of two pets per user at a time. Do not lump together multiple users' entries.</li>
+      <li>The "Listing" or "Listing:" line is optional. You can leave it in or just not copy/paste it into the textbox.
+        Should be fine either way.</li>
+      <li>The program can handle notes that users put in their listing <i>so long as</i> those notes are in parentheses.
+        <ul>
+          <li>Yes: "Petname - Color Species (800 HSD)"</li>
+          <li>No: "Petname - Color Species 800 HSD"</li>
+        </ul>
+        You may have to manually correct some entries to fit this convention.
+      </li>
+      <li>Likewise, this app won't correct any misspellings, lowercase entries, or other errors on its own. As long as
+        PAH listers stick to a conventional style like the example in the textbox, there shouldn't be too many problems.
+        If you want to save yourself a headache, clean up the listing a bit before hitting the "Preview Listing" button.
+      </li>
+      <li>I know exactly how janky all of this looks/is. Graphic design is not my passion. Neither is Javascript.</li>
+    </ul>
+  </div>
+
+</body>
+
+</html>
