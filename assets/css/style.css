@@ -1,0 +1,100 @@
+html {
+  --color1: #000000;
+  --color2: #636c63;
+  --color3: #c9c9c9;
+  --color4: #7aa39a;
+  --color5: #3a6f60;
+
+  margin: auto;
+  width: 80%;
+  color: var(--color1);
+  background: var(--color3);
+  font-family: verdana;
+  font-size: 14px;
+  text-align: center;
+}
+
+li {
+  line-height: 20px;
+  text-align: left;
+}
+
+img {
+  margin: 0px;
+  height: 240px;
+  width: auto;
+}
+
+select {
+  margin: 10px;
+}
+
+textarea {
+  margin: 10px 0px 0px;
+  width: 50%;
+  height: 110px;
+}
+
+button {
+  margin: 10px;
+}
+
+form {
+  margin: 0px;
+  padding-right: 5px;
+  width: 40%;
+  min-width: 240px;
+}
+
+fieldset {
+  margin: 0px;
+  padding: 2px;
+  background: var(--color4);
+  border-color: var(--color5);
+}
+
+input {
+  margin: 0px 5px 5px;
+  width: 10%;
+  max-width: 190px;
+  min-width: 100px;
+}
+
+#insertListing {
+  margin: auto;
+  width: 70%;
+  float: left;
+}
+
+#showListing {
+  margin: auto;
+  /*width: 100%;
+  height: 100%;*/
+  width: 50px;
+  background: red;
+}
+
+#subShowListing {
+  margin: auto;
+  /*min-width: 240px;
+  max-width: 500px;*/
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#subForm {
+  margin: 2px;
+  float: left;
+}
+
+#subForm select {
+  width: 90%;
+}
+
+#showCode {
+  margin: auto;
+  width: 100%;
+  background: white;
+  height: 300px;
+}

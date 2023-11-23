@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Pet Auction House Generator</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="right-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+
+					<!-- Logo -->
+						<h1><a href="index.html">PAH Generator</a></h1>
+
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<div class="row">
+							<div class="col-8 col-12-medium">
+
+								<!-- Content -->
+									<body>
+
+									  <article class="box post">
+										  <center>
+
+									    <h3>Select desired petpage format:<br></h3>
+									    <select name="template" id="template">
+									      <option value="spensy">Standard Format</option>
+									      <option value="1p">Bydz - One Pass</option>
+									      <option value="2p">Bydz - Two Pass</option>
+									      <option value="frenzy">Bydz - Frenzy</option>
+									      <option value="nopass">Bydz - No Pass</option>
+									      <option value="spicy">Bydz - Spicy H&H</option>
+									      <option value="half">Bydz - H&H</option>
+									    </select><br>
+
+									    <h3>Put listing here:</h3>
+									    <textarea id="userListing" rows="6" placeholder="Listing:
+										
+PetName1 - Color1 Species1
+PetName2 - Color2 Species2
+										
+@username"></textarea>
+									    <br>
+									    <button id="previewListing" onclick="parseListing()">Preview Listing</button>
+										</center>
+									    <div id="showListing">
+
+									    </div>
+
+									  </article>
+
+									  
+
+									</body>
+
+							</div>
+							<div class="col-4 col-12-medium">
+
+								<!-- Sidebar -->
+									<section class="box">
+										<header>
+											<h3>Instructions</h3>
+										</header>
+  									    <ul>
+  									      <li>Choose your template from the dropdown. (All Bydz formats are relatively the same, just with rules filled in
+  									        for the desired PAH type.)
+  									      <li>Copy and paste the PAH lister's listing into the textbox on the left.</li>
+  									      <li>Press the "Preview Listing" button.</li>
+  									      <li>Review the listing that pops up below the textbox. If there are any errors you would like to correct, do so.</li>
+  									      <li>When satisfied, press the "Add Listing" button.</li>
+  									      <li>Repeat for all of your listings. <i>Do not refresh</i> or you will lose your progress.</li>
+  									      <li>When done, press the "Generate Petpage" button.</li>
+  									      <li>Copy and paste the resulting code into your (<i>empty!</i>) petpage. Be advised that this program generates
+  									        the <i>entire</i> petpage. You do not need to use a premade code.</li>
+  									      <li>If you want to add more pets to the listing, just keep adding them to the textbox and regenerate the petpage
+  									        as needed.</li>
+  									      <li>Before publishing your petpage, double check that you have your rules and other info.</li>
+  									      <li>That's it, you're done! Go forth and host. The Pound Chat loves you.</li>
+  									    </ul>
+									</section>
+									
+									<section class="box">
+										<header>
+											<h3>Notes</h3>
+										</header>
+    									    <ul>
+    									      <li>Just copy and paste the user's listing. Do not include portions of the user's signature, or the program will
+    									        probably fail.</li>
+    									      <li>List a maximum of two pets per user at a time. Do not lump together multiple users' entries.</li>
+    									      <li>The "Listing" or "Listing:" line is optional. You can leave it in or just not copy/paste it into the textbox.
+    									        Should be fine either way.</li>
+    									      <li>The program can handle notes that users put in their listing <i>so long as</i> those notes are in parentheses.
+    									        <ul>
+    									          <li>Yes: "Petname - Color Species (800 HSD)"</li>
+    									          <li>No: "Petname - Color Species 800 HSD"</li>
+    									        </ul>
+    									        You may have to manually correct some entries to fit this convention.
+    									      </li>
+    									      <li>Likewise, the program won't correct any misspellings, lowercase entries, or other errors on its own. As long as
+    									        PAH listers stick to a conventional style like the example in the textbox, there shouldn't be too many problems.
+    									        If you want to save yourself a headache, clean up the listing a bit before hitting the "Preview Listing" button.
+    									      </li>
+    									    </ul>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+
+								<!-- Copyright -->
+									<div id="copyright">
+										<ul class="links">
+											<li>Generator: <a href="https://neopets.com/userlookup.phtml?user=gracesneos">@gracesneos</a></li>
+											<li>Standard format: <a href="https://www.neopets.com/~spensy">~Spensy</a></li>
+											<li>Bydz format + custom images: <a href="https://www.neopets.com/~spensy">~Bydz</a></li>
+											<li>Website design: <a href="http://html5up.net">HTML5 UP</a></li>
+										</ul>
+									</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<!--<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>-->
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/script.js"></script>
+
+	</body>
+</html>
