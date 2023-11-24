@@ -476,6 +476,28 @@ Petpage generated with gracesneos' generator.<br><br></center>
 <li>One pet listed alone is a no-pass, any valid bids will force a trade</li>
 <li>BN/VBN, Basics, Compounds, Uncapped and 2/3C pets are invalid bids.</li>`).replace("BANNERURL", "http://i.imgur.com/QmeMK1x.png");
         break;
+	  case "underrated":
+		petPageTemplate = petPageTemplate.replace("RULESHERE", `<li>Typical variant rules (H&H, spicy, no-pass, etc.) still apply.</li>
+		  <li>You may not list:</li>
+		  <ul>
+		  	<li>RN/RW/4L</li>
+		  	<li>Plushie</li>
+		  	<li>Robot</li>
+		  	<li>Burlap</li>
+		  	<li>Valentine</li>
+		  	<li>Draiks/Krawks</li>
+		  </ul>
+		  <li>You may list:</li>
+		  <ul>
+		  	<li>DN-VWN</li>
+		  	<li>Any other color/species</li>
+		  	<li>Basics</li>
+		  	<li>Uncapped</li>
+		  	<li>BN BDs</li>
+		  </ul>
+		  <li>Only the LISTERS are restricted in what they put in the pot, BIDDING IS NOT RESTRICTED!</li>`).replace("BANNERURL", "http://i.imgur.com/O7Hcj4t.png");
+		break
+		
     }
     for (let i = 0; i < allListings.length; i++) {
       var petLs = allListings[i].pets;
