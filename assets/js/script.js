@@ -480,20 +480,44 @@ Petpage generated with gracesneos' generator.<br><br></center>
 		petPageTemplate = petPageTemplate.replace("RULESHERE", `<li>Typical variant rules (H&H, spicy, no-pass, etc.) still apply.</li>
 		  <li>You may not list:</li>
 		  <ul>
-		  	<li>RN/RW/4L</li>
-		  	<li>Plushie</li>
-		  	<li>Robot</li>
-		  	<li>Burlap</li>
-		  	<li>Valentine</li>
-		  	<li>Draiks/Krawks</li>
+		  	<li>Colors:</li>
+		  	<ul>
+		  		<li>Plushie</li>
+		  		<li>Robot</li>
+		  		<li>Burlap</li>
+		 	 	<li>Usuki (Boy/Girl)</li>
+			  	<li>Valentine</li>
+		 	 	<li>Alien</li>
+		 	 	<li>MSP</li>
+		  		<li>UCs</li>
+		  	</ul>
+		  	<li>Species</li>
+		  	<ul>
+		  		<li>Draik</li>
+		  		<li>Krawk</li>
+		  	</ul>
+		  	<li>Specific Cases</li>
+		  	<ul>
+		  		<li>Toy: Kougra, Lupe, Draik, Poogle</li>
+		  		<li>Pastel: Kau, Ixi, Aisha, Poogle, Usul</li>
+		  		<li>Maraquan: Lutari, Cybunny, Kiko, Gelert, Vandagyre</li>
+		  	</ul>
+		  	<li>Others</li>
+		  	<ul>
+		  		<li>RN/RW/Pronounceable 4Ls</li>
+		  		<li>VWN-WN Y1-Y3 pets</li>
+		 	 	<li>PP/FFQ/Customs over 1m</li>
+			  	<li>Battledome pets over 200 HSD</li>
+			  	<li>2-3C pets</li>
+		  	</ul>
 		  </ul>
 		  <li>You may list:</li>
 		  <ul>
 		  	<li>DN-VWN</li>
-		  	<li>Any other color/species</li>
 		  	<li>Basics</li>
 		  	<li>Uncapped</li>
 		  	<li>BN BDs</li>
+		  	<li>Any other color/species</li>
 		  </ul>
 		  <li>Only the LISTERS are restricted in what they put in the pot, BIDDING IS NOT RESTRICTED!</li>`).replace("BANNERURL", "http://i.imgur.com/O7Hcj4t.png");
 		break
