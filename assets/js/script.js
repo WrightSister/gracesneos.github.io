@@ -116,16 +116,16 @@ function previewListing(fullListing) {
         switch ($(this).val()) {
           case "NP Custom":
             $("form").find(`input[name=petExtra${i}]`).val("# NP/type of morph/paint");
-            pets[i].image = "https://i.imgur.com/uzGhbRg.png";
+            pets[i].image = "https://images.neopets.com/desert/desert_sc/bag_o_points.gif";
             break
           case "Unlimited NP Custom":
-            pets[i].image = "https://i.imgur.com/VoB4T8r.png";
+            pets[i].image = "https://images.neopets.com/common/bag_of_np.gif";
             break
           case "Fountain Faerie Custom":
-            pets[i].image = "https://i.imgur.com/AHstRJx.png";
+            pets[i].image = "https://images.neopets.com/art/faeries/rainbowfountain18.gif";
             break
           case "Premium Perk Custom":
-            pets[i].image = "https://i.imgur.com/hsCauMU.png";
+            pets[i].image = "https://images.neopets.com/premium/2023/icon-changepet.png";
             break
         }
       }
@@ -158,7 +158,7 @@ function addListing() {
     var description = $("form").find(`input[name=petDescription${i}`).val();
 
     if ($(`#check${i}`).is(":checked")) { // For checking transfer initiating checkbox
-      var init = '<img src="https://i.imgur.com/sSwJvRm.png" style="width: 25px">';
+      var init = '+';
     }
     else {
       var init = ""
@@ -286,7 +286,7 @@ function genPetpage() {
       </ul><center><b>KEY:</b><br>
       ★ = Whatever you want this symbol to mean
       <br>
-      <img src="https://i.imgur.com/sSwJvRm.png" style="width: 25px"> = Can't initiate transfer
+      + = Can't initiate transfer
       <br><br><hr><br></center>
       
       <h1>the pot</h1>
@@ -424,7 +424,7 @@ Pets I want to bid on:
 <center>
 <img src="http://i.imgur.com/BfdxOC0.png"><br><br><h4>Your Host Today is: @#OWNER<br>
 Guide to PAHs → <a href="/~krouth">HERE</a><br>
-<img src="https://i.imgur.com/sSwJvRm.png" style="width: 25px"> = Can't initiate a transfer
++ = Can't initiate a transfer
 </h4></center>
 
 <img src="http://i.imgur.com/WtyB6VA.png" class="banner"><p>
