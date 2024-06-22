@@ -96,6 +96,8 @@ function previewListing(fullListing) {
         <select name="custom${i}" id="custom${i}">
 	  
 		  <option value="blank"></option>
+		  <option value="Paintbrush Custom">PB Custom</option>
+		  <option value="Morphing Potion Custom">MP Custom</option>
 		  <option value="NP Custom">NP Custom</option>
 		  <option value="Unlimited NP Custom">UL NP Custom</option>
 		  <option value="Fountain Faerie Custom">FFQ</option>
@@ -114,15 +116,23 @@ function previewListing(fullListing) {
         $("form").find(`input[name=petSpecies${i}]`).val("");
         $("form").find(`input[name=petExtra${i}]`).val("");
         switch ($(this).val()) {
+          case "Paintbrush Custom":
+            $("form").find(`input[name=petExtra${i}]`).val("# NP/type of morph/paint");
+            pets[i].image = "https://images.neopets.com/surveyimg/5457/25.jpg";
+            break
+          case "Morphing Potion Custom":
+            $("form").find(`input[name=petExtra${i}]`).val("# NP/type of morph/paint");
+            pets[i].image = "https://images.neopets.com/shopkeepers/magicshopkeeper.gif";
+            break
           case "NP Custom":
             $("form").find(`input[name=petExtra${i}]`).val("# NP/type of morph/paint");
-            pets[i].image = "https://images.neopets.com/desert/desert_sc/bag_o_points.gif";
+            pets[i].image = "https://images.neopets.com/premium/2023/icon-npgift.png";
             break
           case "Unlimited NP Custom":
-            pets[i].image = "https://images.neopets.com/common/bag_of_np.gif";
+            pets[i].image = "https://images.neopets.com/brandhub/images/timeline/TL_2004.png";
             break
           case "Fountain Faerie Custom":
-            pets[i].image = "https://images.neopets.com/art/faeries/rainbowfountain18.gif";
+            pets[i].image = "https://images.neopets.com/faerieland/rainbowfountain1_old.gif";
             break
           case "Premium Perk Custom":
             pets[i].image = "https://images.neopets.com/premium/2023/icon-changepet.png";
@@ -320,7 +330,7 @@ function genPetpage() {
 	display: none;
 }
 body {
-	background: url("http://i.imgur.com/2tGxauh.png") fixed;
+	background: grey;
 	font-family: Open Sans,Trebuchet MS,calibri;
 	font-size: 12pt;
 }
@@ -418,18 +428,15 @@ Pets I want to bid on:
 <div id="simplebox" style="border-radius: 3px; position: relative;">
 
 
-
-<img src="BANNERURL" class="banner"> 
-
 <center>
-<img src="http://i.imgur.com/BfdxOC0.png"><br><br><h4>Your Host Today is: @#OWNER<br>
+<br><br><h4>Your Host Today is: @#OWNER<br>
 Guide to PAHs → <a href="/~krouth">HERE</a><br>
 + = Can't initiate a transfer
 </h4></center>
 
-<img src="http://i.imgur.com/WtyB6VA.png" class="banner"><p>
+<p>
 </p><ul>RULESHERE
-</ul><br><br><img src="http://i.imgur.com/1gCg8d8.png" class="banner"><br><br><center> 
+</ul><br><br><br><br><center> 
 
 REPLACEMENT
 
@@ -449,32 +456,32 @@ Petpage generated with gracesneos' generator.<br><br></center>
       case "1p":
         petPageTemplate = petPageTemplate.replace("RULESHERE", `<li>If a listing only has 1 valid bidder (the person, not the pets they are bidding, one person can not force a trade), they may pass.</li>
 <li>If a listing has 2 valid bidders, they must trade.</li>
-<li>BN/VBN, Basics, Compounds, Uncapped and 2/3C pets are invalid bids.</li>`).replace("BANNERURL", "http://i.imgur.com/wAOrFPI.png");
+<li>BN/VBN, Basics, Compounds, Uncapped and 2/3C pets are invalid bids.</li>`);
         break;
       case "2p":
         petPageTemplate = petPageTemplate.replace("RULESHERE", `<li>If a listing only has 1 or 2 valid bidders (the person, not the pets they are bidding, one person can not force a trade), they may pass</li>
 <li>If a listing has 3 or more valid bidders, they must trade</li>
-<li>BN/VBN, Basics, Compounds, Uncapped and 2/3C pets are invalid bids.</li>`).replace("BANNERURL", "http://i.imgur.com/4dAn3NA.png");
+<li>BN/VBN, Basics, Compounds, Uncapped and 2/3C pets are invalid bids.</li>`);
         break;
       case "frenzy":
-        petPageTemplate = petPageTemplate.replace("RULESHERE", `<li>Validity of bids does not matter, listers may pass no matter what, people may bid on bids and bid with listed pets, have at it!</li>`).replace("BANNERURL", "http://i.imgur.com/UFTa3ZE.png");
+        petPageTemplate = petPageTemplate.replace("RULESHERE", `<li>Validity of bids does not matter, listers may pass no matter what, people may bid on bids and bid with listed pets, have at it!</li>`);
         break;
       case "nopass":
         petPageTemplate = petPageTemplate.replace("RULESHERE", `<li>If a listing has any valid bids, they must trade</li>
 <li>Bidders may offer a free pass if they want</li>
-<li>BN/VBN, Basics, Compounds, Uncapped and 2/3C pets are invalid bids.</li>`).replace("BANNERURL", "http://i.imgur.com/w42d6Fj.png");
+<li>BN/VBN, Basics, Compounds, Uncapped and 2/3C pets are invalid bids.</li>`);
         break;
       case "spicy":
         petPageTemplate = petPageTemplate.replace("RULESHERE", `<li>If a listing only has valid bids on one pet, they must trade that pet</li>
 <li>If a listing has valid bids on both pets, they must trade one pet</li>
 <li>One pet listed alone is a no-pass, any valid bids will force a trade</li>
-<li>BN/VBN, Basics, Compounds, Uncapped and 2/3C pets are invalid bids.</li>`).replace("BANNERURL", "http://i.imgur.com/t1saCWJ.png");
+<li>BN/VBN, Basics, Compounds, Uncapped and 2/3C pets are invalid bids.</li>`);
         break;
       case "half":
         petPageTemplate = petPageTemplate.replace("RULESHERE", `<li>If a listing only has valid bids on one pet, they may pass on both</li>
 <li>If a listing has valid bids on both pets, they may pass on one</li>
 <li>One pet listed alone is a no-pass, any valid bids will force a trade</li>
-<li>BN/VBN, Basics, Compounds, Uncapped and 2/3C pets are invalid bids.</li>`).replace("BANNERURL", "http://i.imgur.com/QmeMK1x.png");
+<li>BN/VBN, Basics, Compounds, Uncapped and 2/3C pets are invalid bids.</li>`);
         break;
 	  case "underrated":
 		petPageTemplate = petPageTemplate.replace("RULESHERE", `<li>Typical variant rules (H&H, spicy, no-pass, etc.) still apply.</li>
@@ -519,7 +526,7 @@ Petpage generated with gracesneos' generator.<br><br></center>
 		  	<li>BN BDs</li>
 		  	<li>Any other color/species</li>
 		  </ul>
-		  <li>Only the LISTERS are restricted in what they put in the pot, BIDDING IS NOT RESTRICTED!</li>`).replace("BANNERURL", "http://i.imgur.com/O7Hcj4t.png");
+		  <li>Only the LISTERS are restricted in what they put in the pot, BIDDING IS NOT RESTRICTED!</li>`);
 		break
 		
     }
