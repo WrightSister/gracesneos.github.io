@@ -533,15 +533,11 @@ Petpage generated with gracesneos' generator.<br><br></center>
       }
       pot += `<br style="clear: both;"><br>`
       for (let j = 0; j < petLs.length; j++) {
-	if (petLs[j].color.length > 0) {
-		petLs[j].color = " - "+petLs[j].color
-	}
         pot += `<div class="petname">
-                <b>${petLs[j].petName} ${petLs[j].color} ${petLs[j].species} ${petLs[j].extra} ${petLs[j].initiate}</b><br>
+                <b>${petLs[j].petName} - ${petLs[j].color} ${petLs[j].species} ${petLs[j].extra} ${petLs[j].initiate}</b><br>
                 ${petLs[j].description}
                 
                 </div> `
-      }
       pot += `<br style="clear: both;"><br><h3>@${allListings[i].user}</h3> 
       
       
