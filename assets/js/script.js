@@ -99,7 +99,6 @@ function previewListing(fullListing) {
 		  <option value="Paintbrush Custom">PB Custom</option>
 		  <option value="Morphing Potion Custom">MP Custom</option>
 		  <option value="NP Custom">NP Custom</option>
-		  <option value="Unlimited NP Custom">UL NP Custom</option>
 		  <option value="Fountain Faerie Custom">FFQ</option>
 		  <option value="Premium Perk Custom">PP</option>
     </select>
@@ -118,21 +117,18 @@ function previewListing(fullListing) {
         switch ($(this).val()) {
           case "Paintbrush Custom":
             $("form").find(`input[name=petExtra${i}]`).val("# NP/type of morph/paint");
-            pets[i].image = "https://images.neopets.com/surveyimg/5457/25.jpg";
+            pets[i].image = "https://images.neopets.com/press/elephante_4.jpg";
             break
           case "Morphing Potion Custom":
             $("form").find(`input[name=petExtra${i}]`).val("# NP/type of morph/paint");
-            pets[i].image = "https://images.neopets.com/shopkeepers/magicshopkeeper.gif";
+            pets[i].image = "https://images.neopets.com/press/kau_6.jpg";
             break
           case "NP Custom":
             $("form").find(`input[name=petExtra${i}]`).val("# NP/type of morph/paint");
             pets[i].image = "https://images.neopets.com/premium/2023/icon-npgift.png";
             break
-          case "Unlimited NP Custom":
-            pets[i].image = "https://images.neopets.com/brandhub/images/timeline/TL_2004.png";
-            break
           case "Fountain Faerie Custom":
-            pets[i].image = "https://images.neopets.com/faerieland/rainbowfountain1_old.gif";
+            pets[i].image = "https://images.neopets.com/brandhub/images/characters/Faeries-Naia.png";
             break
           case "Premium Perk Custom":
             pets[i].image = "https://images.neopets.com/premium/2023/icon-changepet.png";
@@ -537,8 +533,11 @@ Petpage generated with gracesneos' generator.<br><br></center>
       }
       pot += `<br style="clear: both;"><br>`
       for (let j = 0; j < petLs.length; j++) {
+	if (petLs[j].color.length > 0) {
+		petLs[j].color = " - "+petLs[j].color
+	}
         pot += `<div class="petname">
-                <b>${petLs[j].petName} - ${petLs[j].color} ${petLs[j].species} ${petLs[j].extra} ${petLs[j].initiate}</b><br>
+                <b>${petLs[j].petName} ${petLs[j].color} ${petLs[j].species} ${petLs[j].extra} ${petLs[j].initiate}</b><br>
                 ${petLs[j].description}
                 
                 </div> `
