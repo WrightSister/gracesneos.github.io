@@ -538,6 +538,7 @@ Petpage generated with gracesneos' generator.<br><br></center>
                 ${petLs[j].description}
                 
                 </div> `
+      }
       pot += `<br style="clear: both;"><br><h3>@${allListings[i].user}</h3> 
       
       
